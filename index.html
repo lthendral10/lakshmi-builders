@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lakshmi Builders - Trusted building construction, renovation, and interior works." />
+  <meta name="google-site-verification" content="XfTQmlUW1Ewg4dTRanyuXvJt5bAP_5r3SGIliZ9VAUE" />
+  <title>Lakshmi Builders | Building Construction Company</title>
+  <link rel="icon" href="img/icon.jpeg" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script>
+  (function(){
+    emailjs.init("MRiiuvwyY0WzJndbl");
+  })();
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f8fafc;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: #0f172a;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      position: relative;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .site-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #f59e0b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0f172a;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #f59e0b;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a:hover {
+      color: #f59e0b;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      color: white;
+      text-align: left;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      max-width: 780px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #f59e0b;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #d97706;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    section:nth-of-type(even) {
+      background: #f1f5f9;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 16px;
+      color: #0f172a;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      color: #475569;
+    }
+
+    .about-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .card p {
+      color: #475569;
+    }
+
+    .projects img,
+    .about-grid img,
+    .gallery img {
+      border-radius: 14px;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .stats {
+      background: #0f172a !important;
+      color: white;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat-box h3 {
+      font-size: 2rem;
+      color: #f59e0b;
+      margin-bottom: 8px;
+    }
+
+    .contact-box {
+      background: white;
+      padding: 24px;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: 0;
+      margin-top: 15px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    footer {
+      background: #020617;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .small {
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .card-grid,
+      .about-grid,
+      .contact-grid,
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0f172a;
+        position: absolute;
+        top: 60px;
+        right: 5%;
+        width: 220px;
+        padding: 20px;
+        border-radius: 12px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .card-grid,
+      .about-grid,
+      .contact-grid,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .logo {
+        font-size: 1.1rem;
+      }
+      /* Image Popup */
+      .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        padding-top: 60px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+      }
+
+      .lightbox img {
+        margin: auto;
+        display: block;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 10px;
+      }
+
+      .lightbox:target {
+        display: block;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: white;
+        font-size: 35px;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo-wrap">
+          <div class="site-logo">LB</div>
+          <div class="logo">Lakshmi Builders</div>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Strong Foundations. Quality Construction. Trusted Service.</h1>
+      <p>We build residential and commercial spaces with modern design, reliable materials, and professional project execution. Your dream building starts here.</p>
+      <a href="#contact" class="btn">Get Free Consultation</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-subtitle">Lakshmi Builders is a trusted construction business focused on quality, durability, and customer satisfaction.</p>
+
+      <div class="about-grid">
+        <div>
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" alt="Construction team" />
+        </div>
+        <div>
+          <h3 style="margin-bottom:12px; color:#0f172a;">Building Dreams with Experience</h3>
+          <p style="margin-bottom:14px;">We specialize in home construction, commercial building work, renovation, and interior solutions. Our goal is to provide strong structures, smart planning, and on-time project delivery.</p>
+          <p style="margin-bottom:14px;">With dedication and practical site experience, we help clients turn ideas into completed buildings that are functional, beautiful, and long-lasting.</p>
+          <a href="#services" class="btn">Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Professional construction services for homes, offices, and renovation projects.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=80" alt="Residential construction" />
+          <div class="card-content">
+            <h3>Residential Construction</h3>
+            <p>Complete house construction with proper planning, quality materials, and clean finishing.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Commercial construction" />
+          <div class="card-content">
+            <h3>Commercial Buildings</h3>
+            <p>Professional construction solutions for shops, office spaces, and commercial projects.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Interior and renovation" />
+          <div class="card-content">
+            <h3>Renovation & Interior</h3>
+            <p>Upgrade old spaces with modern renovation, remodeling, painting, and interior work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-box">
+          <h3>10+</h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-box">
+          <h3>100+</h3>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat-box">
+          <h3>50+</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat-box">
+          <h3>100%</h3>
+          <p>Commitment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2 class="section-title">Project Gallery</h2>
+      <p class="section-subtitle">A few sample views of our work and construction style.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <img src="img/gallery1.jpeg" alt="House exterior" />
+        </div>
+        <div class="card">
+          <img src="img/gallery2.jpeg" alt="Interior design" />
+        </div>
+        <div class="card">
+          <img src="img/gallery3.jpeg" alt="Modern home" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Recent Projects</h2>
+      <p class="section-subtitle">A quick look at the type of spaces and structures we create.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <img src="img/recent1.jpeg" alt="Modern home" />
+          <div class="card-content">
+            <h3>Modern Home Project</h3>
+            <p>Elegant residential structure with spacious design and quality finishing.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/recent2.jpeg" alt="Office building" />
+          <div class="card-content">
+            <h3>Office Building Work</h3>
+            <p>Functional commercial structure designed for productivity and durability.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/recent3.jpeg" alt="Renovated villa" />
+          <div class="card-content">
+            <h3>Villa Renovation</h3>
+            <p>Renovation project with modern styling, polished interiors, and upgraded layout.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="container">
+      <h2 class="section-title">Client Testimonials</h2>
+      <p class="section-subtitle">What our clients say about our construction service.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-content">
+            <h3>Mr. Ramesh</h3>
+            <p>"Lakshmi Builders completed our house construction with very good quality and on-time work."</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>Mrs. Malini</h3>
+            <p>"Very professional team. They explained every step clearly and gave us a beautiful final result."</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>Mr. Shankar</h3>
+            <p>"Best choice for renovation work. Good finishing, proper planning, and friendly communication."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-us">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us</h2>
+      <p class="section-subtitle">We focus on quality work, transparent communication, and timely delivery for every project.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-content">
+            <h3>Quality Materials</h3>
+            <p>We use reliable materials and strong construction methods for long-lasting buildings.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>On-Time Delivery</h3>
+            <p>We plan work properly and aim to complete projects within the committed timeline.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>Customer Support</h3>
+            <p>We listen to client needs carefully and provide updates through every stage of the project.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container">
+      <h2 class="section-title">Our Work Process</h2>
+      <p class="section-subtitle">Simple and clear steps from planning to completion.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-content">
+            <h3>1. Consultation</h3>
+            <p>We understand your requirements, budget, and design idea.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>2. Planning & Design</h3>
+            <p>We prepare proper planning, materials, and timeline for the project.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>3. Construction & Delivery</h3>
+            <p>We execute the work carefully and deliver the project with quality finishing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">Let’s discuss your next building project.</p>
+
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3 style="margin-bottom:14px; color:#0f172a;">Business Information</h3>
+          <p><strong>Company Name:</strong> Lakshmi Builders</p>
+          <p><strong>Phone:</strong> +91 93845 78886</p>
+          <p><strong>Email:</strong> lakshminarayanan1012@email.com</p>
+          <p><strong>Location:</strong> Hosur, Tamil Nadu</p>
+
+          <iframe
+            src="https://www.google.com/maps?q=Hosur,Tamil%20Nadu&output=embed"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <div class="contact-box">
+          <form onsubmit="sendMail(event)">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Your Email" required />
+            <input type="text" id="subject" placeholder="Subject" required />
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn" style="border:none; cursor:pointer;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Lakshmi Builders. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function sendMail(event) {
+     event.preventDefault();
+
+     emailjs.send("service_yuil9fp", "template_8gf8i0i", {
+      from_name: document.getElementById("name").value,
+      from_email: document.getElementById("email").value,
+      subject: document.getElementById("subject").value,
+      message: document.getElementById("message").value
+    })
+    .then(function(response) {
+     alert("Thank you! We will contact you soon.");
+    }, function(error) {
+     alert("Failed to send message. Please try again.");
+    });
+  }
+</script>
+
+ <!-- GALLERY POPUP -->
+  <div id="g1" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="img/gallery1.jpeg">
+  </div>
+
+  <div id="g2" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="img/gallery2.jpeg">
+  </div>
+
+  <div id="g3" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="img/gallery3.jpeg">
+  </div>
+
+ <!-- RECENT PROJECT POPUP -->
+  <div id="r1" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="img/recent1.jpeg">
+  </div>
+
+  <div id="r2" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="img/recent2.jpeg">
+  </div>
+
+  <div id="r3" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="img/recent3.jpeg">
+  </div>
+</body>
+</html>
